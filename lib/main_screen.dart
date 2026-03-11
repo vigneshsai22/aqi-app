@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 import 'screens/compare_screen.dart';
+import 'screens/travel_planning_screen.dart';
+import 'screens/commute_screen.dart';
 import 'screens/settings_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -16,6 +18,8 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _screens = [
     const HomeScreen(),
     const CompareScreen(),
+    const TravelPlanningScreen(),
+    const CommuteScreen(),
     const SettingsScreen(),
   ];
 
@@ -43,6 +47,16 @@ class _MainScreenState extends State<MainScreen> {
             icon: Icon(Icons.compare_arrows_outlined),
             selectedIcon: Icon(Icons.compare_arrows),
             label: 'Compare',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.flight_takeoff_outlined),
+            selectedIcon: Icon(Icons.flight_takeoff),
+            label: 'Travel',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.commute_outlined),
+            selectedIcon: Icon(Icons.commute),
+            label: 'Commute',
           ),
           NavigationDestination(
             icon: Icon(Icons.settings_outlined),

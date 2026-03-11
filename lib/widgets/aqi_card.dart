@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/aqi_data.dart';
 import '../utils/app_colors.dart';
 
+
 class AQICard extends StatelessWidget {
   final AQIData data;
 
@@ -97,7 +98,7 @@ class AQICard extends StatelessWidget {
                     ),
                   ),
                   const Text(
-                    'US AQI',
+                    'Indian AQI',
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey,

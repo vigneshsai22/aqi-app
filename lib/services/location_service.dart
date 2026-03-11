@@ -35,8 +35,14 @@ class LocationService {
 
     // When we reach here, permissions are granted and we can
     // continue accessing the position of the device.
+    // Use LocationSettings for better control
+    const LocationSettings locationSettings = LocationSettings(
+      accuracy: LocationAccuracy.best, // Changed from high to best
+      distanceFilter: 100,
+    );
+
     return await Geolocator.getCurrentPosition(
-      desiredAccuracy: LocationAccuracy.high,
+      locationSettings: locationSettings,
     );
   }
 }

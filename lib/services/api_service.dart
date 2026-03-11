@@ -37,9 +37,9 @@ class ApiService {
         }
       }
 
-      // 1. Fetch AQI
+      // 1. Fetch AQI (Request past 1 day of hourly data for rolling average calculation)
       final aqiResponse = await http.get(Uri.parse(
-          '$_aqiBaseUrl?latitude=$lat&longitude=$lon&current=us_aqi,pm2_5,pm10,nitrogen_dioxide,ozone,sulphur_dioxide&hourly=pm2_5&timezone=auto'));
+          '$_aqiBaseUrl?latitude=$lat&longitude=$lon&current=us_aqi,pm2_5,pm10,nitrogen_dioxide,ozone,sulphur_dioxide&hourly=pm2_5,pm10,nitrogen_dioxide,ozone,sulphur_dioxide&past_days=1&timezone=auto'));
 
       // 2. Fetch Weather
       final weatherResponse = await http.get(Uri.parse(

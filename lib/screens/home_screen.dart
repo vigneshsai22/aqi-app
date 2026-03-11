@@ -211,11 +211,11 @@ class _HomeScreenState extends State<HomeScreen> {
       mainAxisSpacing: 10,
       crossAxisSpacing: 10,
       children: [
-        _buildPollutantCard('PM2.5', '${data.pm2_5}'),
-        _buildPollutantCard('PM10', '${data.pm10}'),
-        _buildPollutantCard('NO2', '${data.no2}'),
-        _buildPollutantCard('O3', '${data.o3}'),
-        _buildPollutantCard('SO2', '${data.so2}'),
+        _buildPollutantCard('PM2.5', '${data.pm2_5.round()}'),
+        _buildPollutantCard('PM10', '${data.pm10.round()}'),
+        _buildPollutantCard('NO2', '${data.no2.round()}'),
+        _buildPollutantCard('O3', '${data.o3.round()}'),
+        _buildPollutantCard('SO2', '${data.so2.round()}'),
       ],
     );
   }
